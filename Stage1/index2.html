@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Competition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <div id="quiz-container">
+        <h1 id="RGhead"><span class="red">RED</span> LIGHT, <span class="green">GREEN</span> LIGHT</h1>
+        <br><br><br>
+
+        <div id="shape-selection">
+            <img src="circle.webp" alt="Circle" class="shape" id="circle">
+            <img src="triangle.webp" alt="Triangle" class="shape" id="triangle">
+            <img src="square.webp" alt="Square" class="shape" id="square">
+            <img src="star.webp" alt="Star" class="shape" id="star">
+        </div>
+
+        <div id="quiz-questions">
+            <h2 id="quiz-title"></h2>
+            <div id="question-container"></div>
+            <div id="result-message"></div>
+            <button id="next-question" onclick="nextQuestion()" style="display:none;">Next Question</button>
+        </div>
+    </div>
+    
+    <!-- Timer Box -->
+<div id="timer-box">
+    <span id="timer"></span>
+</div>
+
+    <!-- Custom Modal Box for adding Extra Life -->
+    <div id="add-life-modal" class="addlife">
+        <div class="addlife-content">
+            <p>Bravo!</p>
+            <p>You have earned 1 extra life.</p>
+            <button onclick="closeaddlife()">OK</button>
+        </div>
+    </div>
+    <!-- Custom Modal Box for removing Extra Life -->
+    <div id="extra-life-modal" class="modal">
+        <div class="modal-content">
+            <p>Your answer was incorrect,</p>
+            <p>You have just 1 life left.</p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="quiz3.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #BC8E66;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.red {
+    color: red;
+    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+
+}
+
+.green {
+    color: green;
+    text-shadow: -1px 0 rgb(255, 255, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+
+}
+
+#shape-selection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#circle {
+    width: 180px;  /* Circle specific size */
+    height: 150px; /* Circle specific size */
+}
+
+#square {
+    width: 180px;  /* Square specific size */
+    height: 150px; /* Square specific size */
+}
+
+#triangle {
+    width: 180px;  /* Triangle specific size */
+    height: 150px; /* Triangle specific size */
+}
+
+#star {
+    width: 180px;  /* Star specific size */
+    height: 150px; /* Star specific size */
+}
+
+#shape-selection img {
+    margin: 10px;
+    cursor: pointer;
+    object-fit: contain; /* Ensures the images scale proportionally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lift effect on hover */
+#shape-selection img:hover {
+    transform: translateY(-10px); /* Moves the image up */
+    box-shadow: 0 0 0 5px rgba(#000,.4) , 0 0 0 10px  #f05f75;}
+
+/* Optional: Apply the same shadow effect when the shape is clicked */
+#shape-selection img:active {
+    transform: translateY(5px); /* Slightly reduce the lift when clicked */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow when clicked */
+}
+
+#shape-selection img:hover {
+    transform: scale(1.1);
+}
+
+#quiz-container {
+    margin-top: 200px;
+}
+
+#quiz-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#question-container {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#result-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#quiz-questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#options-container {
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+}
+h1 {
+    font-size: 60px;
+  }
+
+  /* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Background dimming */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: #f44336; /* Red background */
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 400px;
+    margin: auto;
+}
+
+.modal button {
+    background-color: #fff;
+    color: #f44336;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.modal button:hover {
+    background-color: #f2f2f2;
+}
+
+/* addlife Styles */
+.addlife {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Background dimming */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.addlife-content {
+    background-color: #002703; /* dark green background */
+    padding: 30px;
+    border-radius: 10px;
+    color: rgb(79, 255, 62);
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 400px;
+    margin: auto;
+}
+
+.addlife button {
+    background-color: #fff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.addlife button:hover {
+    background-color: #f2f2f2;
+}
+
+/* Timer box */
+#timer-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: #ffdd00;
+    color: rgb(0, 0, 0);
+    font-size: 4em;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    z-index: 1000;  /* Ensure it's on top */
+}
